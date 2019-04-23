@@ -1,0 +1,119 @@
+*{/*for full screen*/
+	box-sizing: border-box; 
+}
+
+body,html{ /*for full screen*/
+    margin: 0;
+    padding: 0;
+}
+
+.basicBorder{
+	border: 1px solid black;
+}
+
+.centerGridItem{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.mainContainer{
+	display: grid;
+	height: 100vh;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"dia ."
+	"panel panel"
+}
+
+.matrixCorner{
+	display: grid;
+}
+
+.adjacencyMatrix{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: 
+	"holder 	clabel"
+	"rlabel 	trix"
+}
+
+.placeHolder{
+	grid-area: holder;
+}
+
+.colLabels{
+	grid-area: clabel;
+	display: grid;
+}
+
+.rowLabels{
+	grid-area: rlabel;
+	display: grid;
+}
+
+.matrix{
+	grid-area: trix;
+	display: grid;
+}
+
+.controlPanel{
+	grid-area: panel;
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+
+/*
+.panelBounds{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+*/
+.panelBounds{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.statePanel{
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"shead 	shead"
+	"smap 	smap"
+}
+
+.state{
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: auto auto;
+	grid-template-areas: 
+	"shead 	shead"
+	". 	."
+}
+
+.stateHeader{
+	grid-area: shead;
+}
+
+.stateMap{
+	grid-area: smap;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+
+#myDiagramDiv{
+	grid-area: dia;
+}
+
+.connected{
+	background-color: green;
+}
+
+.disjoint{
+	background-color: red;
+}
